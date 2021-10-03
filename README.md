@@ -1,6 +1,6 @@
 # Twitter-Clone
 
-<img src="./image1.png" alt="img"/>
+<img src="./image.png" alt="img"/>
 
 # Tech stack
 <p>REACT JS</p>
