@@ -17,15 +17,25 @@ const TWEETPOST = styled.div`
   }
 
   textarea {
-    width: 99%;
+    width: 80%;
+    font-size: 18px;
     border: none;
-    height: 80px;
-    padding: 20px 0px 0px 20px;
+    height: 70px;
+    padding: 20px;
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: 0;
+  }
+
+  *:focus {
+    outline: 0;
   }
 
   #tweet-btn {
-    width: 20%;
-    height: 50px;
+    width: 15%;
+    height: 40px;
     background-color: hsl(203, 89%, 64%);
     border-radius: 20px;
     border: none;
@@ -34,19 +44,29 @@ const TWEETPOST = styled.div`
     color: white;
     font-weight: 700;
     text-transform: inherit;
+    margin-top: 10px;
   }
 
+  .App__counter {
+    color: #696969;
+    font-size: 14px;
+    margin-left: 85%;
+    margin-bottom: 5px;
+  }
 `; 
 
 const TWEETPOSTITEM = styled.div`
   .items-container {
-    margin-top: 50px;
+    margin-top: 50px ;
     width: 100%;
   }
 `;
 export default function TweetPost() {
 
   const [tweet,setTweet]=useState({})
+  const maxCount = 140;
+  const [count, setCount] = useState(0);
+
 
    const handleChange = (e) => {
      const { name, value } = e.target;
@@ -55,6 +75,9 @@ export default function TweetPost() {
        [name]: value,
      };
      setTweet(payload);
+
+     
+    setCount(e.target.value.length);
    };
 
    const handleSubmit = (e) => {
@@ -83,10 +106,13 @@ export default function TweetPost() {
                 type="text"
                 name="name"
                 id="tweetname"
-                placeholder="Write Post Here"
+                placeholder="Write Post Here...?"
                 onChange={handleChange}
+                maxLength="140"
               />
-              <button id="tweet-btn">ADD TWEET</button>
+
+              <div className="App__counter">{`${count} / ${maxCount}`}</div>
+              <button id="tweet-btn">TWEET</button>
             </form>
           </div>
         </TWEETPOST>

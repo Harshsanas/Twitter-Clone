@@ -10,6 +10,7 @@ import ListAltIcon from "@material-ui/icons/ListAlt";
 import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { Button } from "@material-ui/core";
+// import TwitterIcon from "@mui/icons-material/Twitter";
 
 //style sidebar menu items with material UI icons and styled components
 const SIDEBAR = styled.div`
@@ -20,7 +21,6 @@ padding-left: 40px;
     min-width: 250px;
     padding: 20px 20px;
     margin: 20px auto 0 auto;
-    box-shadow: 0 0 6px hsl(210 14% 90%);
   }
 
   #tweet-btn {
