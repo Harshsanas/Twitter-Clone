@@ -30,7 +30,6 @@ padding-left: 40px;
     border-radius: 20px;
     color: white;
     font-weight: 700;
-    text-transform: inherit;
   }
 `;
 export default function SideBar(){
