@@ -11,7 +11,6 @@ const SIDEBARLINK = styled.div`
   .link:hover {
     background-color: #e8f5fe;
     color: #50b7f5;
-    transition: color 100ms ease-out;
   }
   .link > p {
     font-weight: 700;
